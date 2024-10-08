@@ -186,7 +186,7 @@ The BufferManager is a continuous shared memory area that contains a Header and 
 | `data`    | The actual data contained within the `BufferSlice`.                                                                                                           |
 | `capacity`| The maximum amount of data that can be contained within the `data` field, in bytes.                                                                            |
 | `start`   | The offset from the start of the `BufferSlice` to the first byte of data.                                                                                      |
-| `next`    | A pointer to the next `BufferSlice` in the linked list, as an offset from the start of the `BufferManager` in shared memory.                                      |
+| `next`    | A pointer to the next `BufferSlice` in the linked list, as an offset from the start of the `BufferList` in shared memory.                                      |
 | `flags`   | A two-byte field containing 16 individual flags. The first flag is `nextFlag`, which indicates whether the `next` field is valid. The second flag is `freeFlag`, which indicates whether the `BufferSlice` has been allocated. |
 | `unused`  | Two unused bytes that are not currently defined.                                                                                                               |
                                                                                                                                   
